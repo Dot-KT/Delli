@@ -4,6 +4,8 @@ import com.dtos.RequestProductDto;
 import com.dtos.ResponseProductDto;
 import com.entity.Product;
 import com.service.ProductService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,12 +16,11 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("")
+@RequiredArgsConstructor
 public class ProductController {
 
+
     private final ProductService productService;
-    public ProductController(ProductService productService) {
-        this.productService = productService;
-    }
 
     @PostMapping("/addProduct")
     public ResponseEntity<ResponseProductDto> addProduct(@RequestBody RequestProductDto product) {

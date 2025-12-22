@@ -9,13 +9,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ProductConfig {
 
-//    @Bean
-//    public ProductService productService(ProductRepository productRepository) {
-//        return new ProductService(productRepository);
-//    }
-//    @Bean
-//    public ProductController productController(ProductService productService) {
-//        return new ProductController(productService);
-//    }
+    @Bean
+    public ProductService productService(ProductRepository productRepository) {
+        return new ProductService(productRepository);
+    }
+    @Bean
+    public ProductController productController(ProductService productService) {
+        return new ProductController(productService);
+    }
 
 }
