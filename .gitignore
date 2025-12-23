@@ -9,5 +9,5 @@
 !mvnw.cmd
 README.Docker.md
 script.bat
-
+.env
 
